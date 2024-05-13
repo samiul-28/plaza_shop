@@ -1,0 +1,17 @@
+<h1 class="text-decoration-underline text-center"><%= @mobile_market.brand_name %></h1>
+
+<p class="text-center">Type: <%= @mobile_market.type %></p>
+<p class="text-center">Model_no: <%= @mobile_market.model_no %></p>
+<p class="text-center">Country: <%= @mobile_market.country %></p>
+<p class="text-center">Price: <%= @mobile_market.price %></p>
+<p class="text-center">Produce of: <%= @mobile_market.mfg_date %></p>
+
+
+<div class="text-center">
+ 
+    <li><%= link_to "Edit", edit_mobile_market_path(@mobile_market) %></li>
+
+    <li><%= link_to "Delete", mobile_market_path(@mobile_market), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?" } %></li>
+</div>

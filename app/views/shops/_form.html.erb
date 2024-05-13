@@ -1,0 +1,74 @@
+<%= form.select :shop, selected:  mobile_market, bike_market, garment_market   %>
+   <div class="card" style="width: 22rem;">
+                    <div class="card-body">
+                        <h1>Mobile Market</h1>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Mobile item here!</p>
+                    </div>
+                        <ul class="list-group list-group-flush">
+                            <ol>
+                                <% @mobile_markets.each do |mobile_market| %>
+                                <li>
+                                    <%= link_to mobile_market.name, mobile_market %>
+                                </li>
+                                <% end%>
+                            </ol>
+                        </ul>
+                        <div class="d-grid gap-2 col-4 mx-auto">
+                            <button type="button" class="btn btn-outline-primary">
+                            <a href="http://127.0.0.1:3000/mobile_markets" class="card-link">Menu</a>
+                            </button>
+                        </div>
+                </div> 
+            </div>
+
+            <div class="col-md-4 col-6">
+                <div class="card" style="width: 22rem;">
+                    <div class="card-body">
+                         <h1>Bike Market</h1>
+                           <h5 class="card-title"></h5>
+                         <p class="card-text">Bike item here!</p>
+                    </div>
+                        <ul class="list-group list-group-flush">
+                            <ol>
+                              <% @bike_markets.each do |bike_market| %>
+                            <li>
+                                <%= link_to bike_market.name, bike_market %>
+                            </li>
+                            <% end%>
+                            </ol>
+                        </ul>
+                        <div class="d-grid gap-2 col-4 mx-auto">
+                            <button type="button" class="btn btn-outline-primary">
+                            <a href="http://127.0.0.1:3000/bike_markets" class="card-link">Menu</a>
+                            </button>
+                        </div>
+                </div> 
+            </div>
+
+            <div class="col-md-4 col-6">
+                <div class="card" style="width: 22rem;">
+                    <div class="card-body">
+                        <h1>Garments Market</h1>
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Garments Item here!</p>
+                    </div>
+                        <ul class="list-group list-group-flush">
+                            <ol>
+                                <% @garment_markets.each do |garment_market| %>
+                                <li>
+                                    <%= link_to garment_market.name, garment_market %>
+                                </li>
+                                <% end%>
+                            </ol>
+                        </ul>
+                        <div class="d-grid gap-2 col-4 mx-auto">
+                            <button type="button" class="btn btn-outline-primary">
+                            <a href="http://127.0.0.1:3000/garment_markets" class="card-link">Menu</a>
+                            </button>
+                        </div>
+
+
+
+
+<% end %>

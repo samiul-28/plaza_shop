@@ -1,0 +1,2 @@
+module BikeMarketsHelper
+end

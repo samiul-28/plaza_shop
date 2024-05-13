@@ -1,0 +1,2 @@
+module GarmentsMarketsHelper
+end

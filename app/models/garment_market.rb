@@ -1,0 +1,2 @@
+class GarmentMarket < Shop
+end

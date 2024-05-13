@@ -1,0 +1,80 @@
+<%= form_with model: mobile_market do |form| %>
+  <div class="row mb-3">
+    <div class="col-sm-4 col-form-label">
+      <%= form.label :Brand_name %><br>
+    </div>
+    <div class="col-sm-9">
+      <div class="row form-control">
+        <%= form.text_field :Brand_name %>
+        <% mobile_market.errors.full_messages_for(:Brand_name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>  
+    </div>
+  </div>
+
+  <div class= "row mb-3">
+      <div class="col-sm-4 col-form-label">
+        <%= form.label :model_no %><br>
+      </div>
+      <div class="col-sm-9">
+        <div class="row form-control">
+          <%= form.text_field :model_no %>
+          <% mobile_market.errors.full_messages_for(:model_no).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
+      </div>
+  </div>
+
+  <div class= "row mb-3">
+      <div class="col-sm-4 col-form-label">
+        <%= form.label :country %><br>
+      </div>  
+      <div class="col-sm-9">
+        <div class="row form-control">
+          <%= form.text_area :country %>
+          <% mobile_market.errors.full_messages_for(:country).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div> 
+      </div>
+  </div>
+
+  <div class= "row mb-3">
+        <div class="col-sm-4 col-form-label">
+          <%= form.label :price %><br>
+        </div>
+        <div class="col-sm-9">
+          <div class="row form-control">
+            <%= form.number_field :price %>
+            <% mobile_market.errors.full_messages_for(:price).each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div> 
+       </div> 
+  </div>
+
+  <div class="row mb-3">
+      <div class="col-sm-4 col-form-label">
+        <%= form.label :mfg_date %><br>
+      </div>
+      <div class="col-sm-9">
+          <div class="row form-control">
+            <%= form.date_field :mfg_date %>
+            <% mobile_market.errors.full_messages_for(:mfg_date).each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div>
+      </div>
+  </div>
+
+  
+  
+  
+
+
+  <div class="col-auto">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+<% end %>

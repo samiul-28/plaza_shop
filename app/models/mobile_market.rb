@@ -1,0 +1,3 @@
+class MobileMarket < Shop
+   
+end

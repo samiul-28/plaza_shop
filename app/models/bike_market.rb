@@ -1,0 +1,2 @@
+class BikeMarket < Shop
+end

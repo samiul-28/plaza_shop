@@ -1,0 +1,2 @@
+module MobileMarketsHelper
+end
