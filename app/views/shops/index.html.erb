@@ -31,15 +31,15 @@
                   <% @shops.where("type = 'BikeMarket'").each do |bike_market| %>
                     <div class="col align-self-start card" style="width: 22rem;">
                         <div class="card-body">
-                            <h3 class="card-title text-decoration-underline text-center"><%= bike_market.brand_name %></h3>
+                            <h3 class="card-title text-decoration-underline text-center"><%= bike_market.Brand_name %></h3>
                             <p class="text-center">
-                            Model_no: <%= mobile_market.model_no %><br>
-                            Country: <%= mobile_market.country %><br>
-                            Price: <%= mobile_market.price %><br>
-                            Produce of: <%= mobile_market.mfg_date %></p>
+                            Model_no: <%= bike_market.model_no %><br>
+                            Country: <%= bike_market.country %><br>
+                            Price: <%= bike_market.price %><br>
+                            Produce of: <%= bike_market.mfg_date %></p>
                             <div class="text-center">
-                                <%= link_to "Edit", edit_leafy_green_path(bike_market) %>
-                                <%= link_to "Delete", leafy_green_path(bike_market), data: {
+                                <%= link_to "Edit", edit_bike_market_path(bike_market) %>
+                                <%= link_to "Delete", bike_market_path(bike_market), data: {
                                                 turbo_method: :delete,
                                                 turbo_confirm: "Are you sure?" } %>
                             </div>
@@ -53,12 +53,12 @@
                   <% @shops.where("type = 'GarmentMarket'").each do |garment_market| %>
                     <div class="col align-self-start card" style="width: 22rem;">
                         <div class="card-body">
-                            <h3 class="card-title text-decoration-underline text-center"><%= garment_market.name %></h3>
+                            <h3 class="card-title text-decoration-underline text-center"><%= garment_market.Brand_name %></h3>
                             <p class="text-center">
-                            Model_no: <%= mobile_market.model_no %><br>
-                            Country: <%= mobile_market.country %><br>
-                            Price: <%= mobile_market.price %><br>
-                            Produce of: <%= mobile_market.mfg_date %></p>
+                            Model_no: <%= garment_market.model_no %><br>
+                            Country: <%= garment_market.country %><br>
+                            Price: <%= garment_market.price %><br>
+                            Produce of: <%= garment_market.mfg_date %></p>
                            <div class="text-center">
  
                             <li><%= link_to "Edit", edit_garment_market_path(garment_market) %></li>

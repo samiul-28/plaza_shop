@@ -970,3 +970,227 @@ Processing by ShopsController#index as HTML
 Completed 200 OK in 12356ms (Views: 12280.2ms | ActiveRecord: 22.0ms | Allocations: 129731)
 
 
+Started GET "/" for 127.0.0.1 at 2024-05-13 10:17:03 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 94.4ms | Allocations: 22422)
+  Rendered layout layouts/application.html.erb (Duration: 224.4ms | Allocations: 75049)
+Completed 200 OK in 274ms (Views: 213.6ms | ActiveRecord: 16.3ms | Allocations: 86807)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBikeMarket Create (1.9ms)[0m  [1m[32mINSERT INTO "shops" ("Brand_name", "type", "model_no", "country", "price", "mfg_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Brand_name", "Royel Enfield"], ["type", "BikeMarket"], ["model_no", "708.0"], ["country", "USA"], ["price", "400990.0"], ["mfg_date", "2001-04-05"], ["created_at", "2024-05-13 04:50:37.728112"], ["updated_at", "2024-05-13 04:50:37.728112"]]
+  [1m[36mTRANSACTION (110.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBikeMarket Create (6.0ms)[0m  [1m[32mINSERT INTO "shops" ("Brand_name", "type", "model_no", "country", "price", "mfg_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Brand_name", "Hero"], ["type", "BikeMarket"], ["model_no", "5468.0"], ["country", "India"], ["price", "100990.0"], ["mfg_date", "2003-04-05"], ["created_at", "2024-05-13 04:50:37.848037"], ["updated_at", "2024-05-13 04:50:37.848037"]]
+  [1m[36mTRANSACTION (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBikeMarket Create (5.8ms)[0m  [1m[32mINSERT INTO "shops" ("Brand_name", "type", "model_no", "country", "price", "mfg_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Brand_name", "Walton"], ["type", "BikeMarket"], ["model_no", "987.0"], ["country", "Bangladesh"], ["price", "200990.0"], ["mfg_date", "2007-04-05"], ["created_at", "2024-05-13 04:50:37.894055"], ["updated_at", "2024-05-13 04:50:37.894055"]]
+  [1m[36mTRANSACTION (30.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarmentMarket Create (22.8ms)[0m  [1m[32mINSERT INTO "shops" ("Brand_name", "type", "model_no", "country", "price", "mfg_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Brand_name", "Silk"], ["type", "GarmentMarket"], ["model_no", "6.0"], ["country", "Bangladesh"], ["price", "490.0"], ["mfg_date", "2009-04-05"], ["created_at", "2024-05-13 04:50:37.957780"], ["updated_at", "2024-05-13 04:50:37.957780"]]
+  [1m[36mTRANSACTION (43.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarmentMarket Create (5.9ms)[0m  [1m[32mINSERT INTO "shops" ("Brand_name", "type", "model_no", "country", "price", "mfg_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Brand_name", "Jamdani"], ["type", "GarmentMarket"], ["model_no", "7.0"], ["country", "Bangladesh"], ["price", "400.0"], ["mfg_date", "2005-04-05"], ["created_at", "2024-05-13 04:50:38.032778"], ["updated_at", "2024-05-13 04:50:38.032778"]]
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGarmentMarket Create (4.8ms)[0m  [1m[32mINSERT INTO "shops" ("Brand_name", "type", "model_no", "country", "price", "mfg_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["Brand_name", "Katan"], ["type", "GarmentMarket"], ["model_no", "8.0"], ["country", "Bangladesh"], ["price", "990.0"], ["mfg_date", "2001-04-05"], ["created_at", "2024-05-13 04:50:38.078908"], ["updated_at", "2024-05-13 04:50:38.078908"]]
+  [1m[36mTRANSACTION (28.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2024-05-13 10:52:47 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (3.1ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  Rendered shops/index.html.erb within layouts/application (Duration: 158.5ms | Allocations: 27471)
+  Rendered layout layouts/application.html.erb (Duration: 160.3ms | Allocations: 27597)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 30.3ms | Allocations: 39302)
+
+
+  
+ActionView::Template::Error (undefined method `brand_name' for #<BikeMarket id: 4, Brand_name: "Royel Enfield", type: "BikeMarket", model_no: 0.708e3, country: "USA", price: 0.40099e6, mfg_date: "2001-04-05", created_at: "2024-05-13 04:50:37.728112000 +0000", updated_at: "2024-05-13 04:50:37.728112000 +0000">):
+    31:                   <% @shops.where("type = 'BikeMarket'").each do |bike_market| %>
+    32:                     <div class="col align-self-start card" style="width: 22rem;">
+    33:                         <div class="card-body">
+    34:                             <h3 class="card-title text-decoration-underline text-center"><%= bike_market.brand_name %></h3>
+    35:                             <p class="text-center">
+    36:                             Model_no: <%= mobile_market.model_no %><br>
+    37:                             Country: <%= mobile_market.country %><br>
+  
+app/views/shops/index.html.erb:34
+app/views/shops/index.html.erb:31
+Started GET "/" for 127.0.0.1 at 2024-05-13 10:56:15 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  Rendered shops/index.html.erb within layouts/application (Duration: 51.6ms | Allocations: 14197)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 14289)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 5.8ms | Allocations: 16829)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mobile_market' for #<ActionView::Base:0x00000000012458>):
+    33:                         <div class="card-body">
+    34:                             <h3 class="card-title text-decoration-underline text-center"><%= bike_market.Brand_name %></h3>
+    35:                             <p class="text-center">
+    36:                             Model_no: <%= mobile_market.model_no %><br>
+    37:                             Country: <%= mobile_market.country %><br>
+    38:                             Price: <%= mobile_market.price %><br>
+    39:                             Produce of: <%= mobile_market.mfg_date %></p>
+  
+app/views/shops/index.html.erb:36
+app/views/shops/index.html.erb:31
+Started GET "/" for 127.0.0.1 at 2024-05-13 10:59:09 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  Rendered shops/index.html.erb within layouts/application (Duration: 55.2ms | Allocations: 14228)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 14320)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 7.1ms | Allocations: 16855)
+
+
+  
+ActionView::Template::Error (undefined method `edit_leafy_green_path' for #<ActionView::Base:0x000000000175c0>):
+    38:                             Price: <%= bike_market.price %><br>
+    39:                             Produce of: <%= bike_market.mfg_date %></p>
+    40:                             <div class="text-center">
+    41:                                 <%= link_to "Edit", edit_leafy_green_path(bike_market) %>
+    42:                                 <%= link_to "Delete", leafy_green_path(bike_market), data: {
+    43:                                                 turbo_method: :delete,
+    44:                                                 turbo_confirm: "Are you sure?" } %>
+  
+app/views/shops/index.html.erb:41
+app/views/shops/index.html.erb:31
+Started GET "/" for 127.0.0.1 at 2024-05-13 11:00:23 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 57.4ms | Allocations: 18825)
+  Rendered layout layouts/application.html.erb (Duration: 57.8ms | Allocations: 18917)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 6.4ms | Allocations: 21452)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<GarmentMarket id: 7, Brand_name: "Silk", type: "GarmentMarket", model_no: 0.6e1, country: "Bangladesh", price: 0.49e3, mfg_date: "2009-04-05", created_at: "2024-05-13 04:50:37.957780000 +0000", updated_at: "2024-05-13 04:50:37.957780000 +0000">):
+    53:                   <% @shops.where("type = 'GarmentMarket'").each do |garment_market| %>
+    54:                     <div class="col align-self-start card" style="width: 22rem;">
+    55:                         <div class="card-body">
+    56:                             <h3 class="card-title text-decoration-underline text-center"><%= garment_market.name %></h3>
+    57:                             <p class="text-center">
+    58:                             Model_no: <%= garment_market.model_no %><br>
+    59:                             Country: <%= garment_market.country %><br>
+  
+app/views/shops/index.html.erb:56
+app/views/shops/index.html.erb:53
+Started GET "/" for 127.0.0.1 at 2024-05-13 11:01:02 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 65.4ms | Allocations: 18005)
+  Rendered layout layouts/application.html.erb (Duration: 296.2ms | Allocations: 69308)
+Completed 200 OK in 309ms (Views: 292.2ms | ActiveRecord: 7.7ms | Allocations: 71911)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 11:02:06 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (1.0ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 62.3ms | Allocations: 18011)
+  Rendered layout layouts/application.html.erb (Duration: 100.2ms | Allocations: 42744)
+Completed 200 OK in 111ms (Views: 95.1ms | ActiveRecord: 7.1ms | Allocations: 45307)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 11:02:07 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (2.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (2.2ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (1.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 35.5ms | Allocations: 2370)
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 7279)
+Completed 200 OK in 65ms (Views: 56.5ms | ActiveRecord: 6.3ms | Allocations: 7549)
+
+
+Started GET "/mobile_markets/1/edit" for 127.0.0.1 at 2024-05-13 11:02:22 +0600
+Processing by MobileMarketsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMobileMarket Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND "shops"."id" = $2 LIMIT $3[0m  [["type", "MobileMarket"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mobile_markets_controller.rb:48:in `find_mobile_market'
+  Rendering layout layouts/application.html.erb
+  Rendering mobile_markets/edit.html.erb within layouts/application
+  Rendered mobile_markets/_form.html.erb (Duration: 50.4ms | Allocations: 3594)
+  Rendered mobile_markets/edit.html.erb within layouts/application (Duration: 51.4ms | Allocations: 3842)
+  Rendered layout layouts/application.html.erb (Duration: 79.8ms | Allocations: 28307)
+Completed 200 OK in 113ms (Views: 82.1ms | ActiveRecord: 4.4ms | Allocations: 40785)
+
+
+Started GET "/mobile_markets/1/edit" for 127.0.0.1 at 2024-05-13 11:02:28 +0600
+Processing by MobileMarketsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMobileMarket Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE "shops"."type" = $1 AND "shops"."id" = $2 LIMIT $3[0m  [["type", "MobileMarket"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mobile_markets_controller.rb:48:in `find_mobile_market'
+  Rendering layout layouts/application.html.erb
+  Rendering mobile_markets/edit.html.erb within layouts/application
+  Rendered mobile_markets/_form.html.erb (Duration: 5.7ms | Allocations: 1478)
+  Rendered mobile_markets/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1541)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 6213)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.4ms | Allocations: 6911)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-13 11:02:32 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (1.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (1.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 10493)
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 15453)
+Completed 200 OK in 88ms (Views: 78.8ms | ActiveRecord: 3.4ms | Allocations: 15966)
+
+

@@ -1,2 +1,17 @@
-<h1>BikeMarkets#show</h1>
-<p>Find me in app/views/bike_markets/show.html.erb</p>
+<h1 class="text-decoration-underline text-center"><%= @bike_market.brand_name %></h1>
+
+<p class="text-center">Type: <%= @bike_market.type %></p>
+<p class="text-center">Model_no: <%= @bike_market.model_no %></p>
+<p class="text-center">Country: <%= @bike_market.country %></p>
+<p class="text-center">Price: <%= @bike_market.price %></p>
+<p class="text-center">Produce of: <%= @bike_market.mfg_date %></p>
+
+
+<div class="text-center">
+ 
+    <li><%= link_to "Edit", edit_bike_market_path(@bike_market) %></li>
+
+    <li><%= link_to "Delete", bike_market_path(@bike_market), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?" } %></li>
+</div>

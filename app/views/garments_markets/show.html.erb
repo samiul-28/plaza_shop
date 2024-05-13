@@ -1,2 +1,17 @@
-<h1>GarmentsMarkets#show</h1>
-<p>Find me in app/views/garments_markets/show.html.erb</p>
+<h1 class="text-decoration-underline text-center"><%= @garment_market.brand_name %></h1>
+
+<p class="text-center">Type: <%= @garment_market.type %></p>
+<p class="text-center">Model_no: <%= @garment_market.model_no %></p>
+<p class="text-center">Country: <%= @garment_market.country %></p>
+<p class="text-center">Price: <%= @garment_market.price %></p>
+<p class="text-center">Produce of: <%= @garment_market.mfg_date %></p>
+
+
+<div class="text-center">
+ 
+    <li><%= link_to "Edit", edit_garment_market_path(@garment_market) %></li>
+
+    <li><%= link_to "Delete", garment_market_path(@garment_market), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?" } %></li>
+</div>                      

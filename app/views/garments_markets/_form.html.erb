@@ -1,2 +1,81 @@
-<h1>GarmentsMarkets#_form</h1>
-<p>Find me in app/views/garments_markets/_form.html.erb</p>
+<%= form_with model: garment_market do |form| %>
+  <div class="row mb-3">
+    <div class="col-sm-4 col-form-label">
+      <%= form.label :Brand_name %><br>
+    </div>
+    <div class="col-sm-9">
+      <div class="row form-control">
+        <%= form.text_field :Brand_name %>
+        <% garment_market.errors.full_messages_for(:Brand_name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>  
+    </div>
+  </div>
+
+  <div class= "row mb-3">
+      <div class="col-sm-4 col-form-label">
+        <%= form.label :model_no %><br>
+      </div>
+      <div class="col-sm-9">
+        <div class="row form-control">
+          <%= form.text_field :model_no %>
+          <% garment_market.errors.full_messages_for(:model_no).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div>
+      </div>
+  </div>
+
+  <div class= "row mb-3">
+      <div class="col-sm-4 col-form-label">
+        <%= form.label :country %><br>
+      </div>  
+      <div class="col-sm-9">
+        <div class="row form-control">
+          <%= form.text_area :country %>
+          <% garment_market.errors.full_messages_for(:country).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+        </div> 
+      </div>
+  </div>
+
+  <div class= "row mb-3">
+        <div class="col-sm-4 col-form-label">
+          <%= form.label :price %><br>
+        </div>
+        <div class="col-sm-9">
+          <div class="row form-control">
+            <%= form.number_field :price %>
+            <% garment_market.errors.full_messages_for(:price).each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div> 
+       </div> 
+  </div>
+
+  <div class="row mb-3">
+      <div class="col-sm-4 col-form-label">
+        <%= form.label :mfg_date %><br>
+      </div>
+      <div class="col-sm-9">
+          <div class="row form-control">
+            <%= form.date_field :mfg_date %>
+            <% garment_market.errors.full_messages_for(:mfg_date).each do |message| %>
+              <div><%= message %></div>
+            <% end %>
+          </div>
+      </div>
+  </div>
+
+  
+  
+  
+
+
+  <div class="col-auto">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+<% end %>
+
