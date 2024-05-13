@@ -1194,3 +1194,49 @@ Processing by ShopsController#index as HTML
 Completed 200 OK in 88ms (Views: 78.8ms | ActiveRecord: 3.4ms | Allocations: 15966)
 
 
+Started GET "/" for ::1 at 2024-05-13 12:22:53 +0600
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (20.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.3ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.4ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 140.9ms | Allocations: 30593)
+  Rendered layout layouts/application.html.erb (Duration: 528.8ms | Allocations: 83718)
+Completed 200 OK in 681ms (Views: 514.2ms | ActiveRecord: 43.5ms | Allocations: 95476)
+
+
+Started GET "/" for ::1 at 2024-05-13 12:23:47 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.7ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.6ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 56.2ms | Allocations: 18029)
+  Rendered layout layouts/application.html.erb (Duration: 97.6ms | Allocations: 42784)
+Completed 200 OK in 109ms (Views: 93.5ms | ActiveRecord: 6.8ms | Allocations: 45349)
+
+
+Started GET "/" for ::1 at 2024-05-13 12:26:26 +0600
+Processing by ShopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering shops/index.html.erb within layouts/application
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'MobileMarket')[0m
+  ↳ app/views/shops/index.html.erb:6
+  [1m[36mShop Load (0.8ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'BikeMarket')[0m
+  ↳ app/views/shops/index.html.erb:31
+  [1m[36mShop Load (0.5ms)[0m  [1m[34mSELECT "shops".* FROM "shops" WHERE (type = 'GarmentMarket')[0m
+  ↳ app/views/shops/index.html.erb:53
+  Rendered shops/index.html.erb within layouts/application (Duration: 58.7ms | Allocations: 17973)
+  Rendered layout layouts/application.html.erb (Duration: 107.7ms | Allocations: 42747)
+Completed 200 OK in 119ms (Views: 102.2ms | ActiveRecord: 8.2ms | Allocations: 45287)
+
+
